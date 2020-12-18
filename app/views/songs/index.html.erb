@@ -1,0 +1,13 @@
+<div>
+   <h1>Songs</h1>
+   <table>
+      <tbody>
+         <% @songs.each do |s| %>
+            <tr> 
+               <%= s.title %> 
+               <%= button_to "Delete", s, method: :delete, data: { confirm: "Really?"} %>
+            </tr>
+         <% end %>
+      </tbody>      
+   </table>
+</div>
